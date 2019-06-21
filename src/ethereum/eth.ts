@@ -132,7 +132,8 @@ export namespace eth {
       const instance = await wallet.createContractInstance(contract.abi, contract.address)
       contract.setInstance(instance)
 
-      contracts[contractName] = contract
+      // *** This was modified in order to work with Decentraland TCR (Assets) project ***
+      eth.contracts[contract.address] = contract;
     }
   }
 
